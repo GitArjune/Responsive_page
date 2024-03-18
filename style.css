@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+
+    /* (p: r=>)  it is a good, mainly given to parent element to control the 
+     the overflow..*/
+    position: relative; 
+}
+nav{
+    
+    width: 100%;
+    height: 90px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 5vw;
+    border-bottom: 2px solid #dadada;
+
+}
+
+.nav-part2{
+    display: flex;
+    /* background-color: blue; */
+    align-items: center;
+    gap: 4vh;
+   
+}
+
+nav h2{
+    font-size: 3vw;
+    font-weight: 800;
+}
+
+nav h4{
+    font-size: 1.8vw;
+
+}
+
+nav i{
+    font-size: 1rem;
+    font-weight: 700;
+    /* display: none; */
+
+}
+
+.content{
+    width: 100%;
+    /* to avoid the scrolling, to use this simply 
+    minus the footer height */
+    height: calc(100% - 90px);
+    /* background-color: rgb(218, 217, 216); */
+    display: flex;
+    position: relative;
+}
+
+.left{
+    width: 50%;
+    height: 100%;
+    /* background-color: aqua; */
+    padding: 5vw 5vw;
+}
+
+
+.left h1{
+    font-size: 3.2rem;
+    line-height: 4.6vw;
+    /* text-align: justify; */
+    letter-spacing: 0.2rem;
+
+}
+
+
+.left p{
+    /* background-color: antiquewhite; */
+    font-size: 2vw;
+    font-weight: 700;
+    width: 80%;
+    color: #666;
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+}
+
+.left h1 span{
+    color: rgb(231, 157, 20);
+}
+
+button{
+    font-size: 1.5vw;
+    padding: 1vw 2vw;
+    background-color: rgb(231, 157, 20);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
+.right{
+    width: 50%;
+    height: 100%;
+    /* background-color: rgb(22, 74, 57); */
+
+}
+
+.right img{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    nav{
+        /* background-color: lightblue; */
+        /* color: blue; */
+        padding: 0 1vw;
+        height: 60px;
+    }
+
+    .left h1{
+        font-size: 1.9rem;
+        line-height: 2rem;
+        /* text-align: justify; */
+        margin-bottom: 2rem;
+    }
+    nav h2{
+        text-align: justify;
+        font-size: 7vw;
+        margin: 4vw;
+
+    }
+    nav h4{
+        display: none;
+        /* font-size: 5vw; */
+        
+    }
+    
+    .left button{
+        /* display: none; */
+        font-size: medium;
+        margin-top: 0.7rem;
+
+    }
+
+    nav i{
+        margin-right: 2rem;
+    }
+
+    .left p{
+        font-size: 1rem;
+        color: black;
+        font-weight: 700;
+
+    }
+
+    .content{
+        height: calc(100% - 60px);
+        flex-direction: column;
+    }
+
+
+    .left{
+        width: 100%;
+        height: 50%;
+    }
+    .right{
+        width: 100%;
+        height: 50%;
+    }
+}
